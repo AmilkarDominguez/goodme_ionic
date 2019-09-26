@@ -4,6 +4,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { RouterTestingModule } from '@angular/router/testing';////
 
 import { AppComponent } from './app.component';
 
@@ -25,6 +26,7 @@ describe('AppComponent', () => {
         { provide: SplashScreen, useValue: splashScreenSpy },
         { provide: Platform, useValue: platformSpy },
       ],
+      imports: [ RouterTestingModule.withRoutes([])],////
     }).compileComponents();
   }));
 
