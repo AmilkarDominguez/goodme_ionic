@@ -1,9 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-login
+  <div align="center" class="p-0 m-0">
+      <img class="img-logo" src="../../assets/images/logo_login.svg" alt="" />
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-input placeholder="Correo" class="input"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-input type="password" placeholder="Contraseña" class="input"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button expand="full" class="btn bg_primary" shape="round">INGRESAR</ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <div align="right" class="p-2">
+          <a href="">Registrarse</a>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3" offset="3">
+        <div align="center">
+          <ion-fab-button class="bg_primary">
+            <ion-icon name="logo-google"></ion-icon>
+          </ion-fab-button>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div align="center">
+          <ion-fab-button class="bg_primary">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-fab-button>
+        </div>
+      </ion-col>
+      <ion-col offset="3"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div align="center">
+          <a href=""><b>¿Olvidaste la contraseña?</b></a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

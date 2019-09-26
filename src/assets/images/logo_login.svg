@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 432 343.6" style="enable-background:new 0 0 432 343.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#Trazado_394-2_2_);}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;}
+	.st3{font-family:'Nunito-Bold';}
+	.st4{font-size:41.3202px;}
+</style>
+<g id="Grupo_263" transform="translate(9 -14)">
+	<g transform="matrix(1, 0, 0, 1, -9, 14)">
+		<linearGradient id="Trazado_394-2_2_" gradientUnits="userSpaceOnUse" x1="0" y1="169.0919" x2="432" y2="169.0919">
+			<stop  offset="0" style="stop-color:#00675B"/>
+			<stop  offset="1" style="stop-color:#009688"/>
+		</linearGradient>
+		<path id="Trazado_394-2_1_" class="st0" d="M0,281c0,0,8.7-19.4,39.6-18.6s111.6,37.3,171,33.4s89.4-26.9,107.2-39.7
+			c17.8-12.8,39.6-33.4,60.7-23.2s9.6,29.4-1.8,43.4s-20.1,24.7-23.2,30s-8.5,19.4,0,27.6c8.5,8.1,21.3,2.3,23.2,1.9
+			c1.9-0.4,31.6-12.7,31.6-12.7s12.6-5.3,17.2-4.2c2.6,0.5,4.9,2,6.5,4.2V0H0V281z"/>
+	</g>
+	<g id="Logo" transform="translate(114.76 3.781)">
+		<g id="Grupo_64" transform="translate(15.24 42.336)">
+			<path id="Trazado_390" class="st1" d="M147.3,12.3L147.3,12.3C136-2,115-4.4,100.6,6.8c-2.1,1.6-3.9,3.4-5.6,5.5l-60,75
+				l34.8,43.4c3.3,4.1,9.4,4.8,13.6,1.6c0.6-0.5,1.1-1,1.6-1.6l62.4-77.9C156.9,40.9,156.9,24.1,147.3,12.3z"/>
+			<path id="Trazado_391" class="st1" d="M59.4,12C48.1-2.2,27.1-4.7,12.7,6.5C10.6,8.1,8.8,9.9,7.1,12l0,0
+				c-9.5,11.9-9.5,28.6,0,40.5l22.4,28l42.4-52.9L59.4,12z"/>
+		</g>
+		<g id="Grupo_65" transform="translate(15.24 42.336)">
+			<path id="Trazado_392" class="st2" d="M147.3,12.3L147.3,12.3C136-2,115-4.4,100.6,6.8c-2.1,1.6-3.9,3.4-5.6,5.5l-60,75
+				l34.8,43.4c3.3,4.1,9.4,4.8,13.6,1.6c0.6-0.5,1.1-1,1.6-1.6l62.4-77.9C156.9,40.9,156.9,24.1,147.3,12.3z"/>
+			<path id="Trazado_393" class="st2" d="M59.4,12C48.1-2.2,27.1-4.7,12.7,6.5C10.6,8.1,8.8,9.9,7.1,12l0,0
+				c-9.5,11.9-9.5,28.6,0,40.5l22.4,28l42.4-52.9L59.4,12z"/>
+		</g>
+	</g>
+	<text transform="matrix(1.0165 0 0 1 128 235.3584)" class="st1 st3 st4">goodme</text>
+</g>
+</svg>
