@@ -15,16 +15,25 @@
       <ion-col size="12">
         <ion-input placeholder="Nombre completo" class="input"></ion-input>
       </ion-col>
+      <!--Date-->
+      <ion-col size="12">
+        <ion-datetime placeholder="Fecha de Nacimiento" class="input" min="1990-02" max="2019" 
+        monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+        cancelText="Cancelar"
+        doneText="Ok">
+        </ion-datetime>
+      </ion-col>
+
       <!--weight-->
       <ion-col size="12">
         <ion-label class="text-primary">Peso kl.</ion-label>
-        <ion-range min="40" max="120" step="1">
+        <ion-range min="40" max="120" step="1" pin="true">
         </ion-range>
       </ion-col>
       <!--long-->
       <ion-col size="12">
         <ion-label class="text-primary">Estatura cm.</ion-label>
-        <ion-range min="120" max="220" step="1">
+        <ion-range min="120" max="220" step="1" pin="true">
         </ion-range>
       </ion-col>
       <!--genere-->
