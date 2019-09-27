@@ -1,0 +1,7 @@
+{
+  "appId": "com.hegaro.goodme",
+  "appName": "goodme",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

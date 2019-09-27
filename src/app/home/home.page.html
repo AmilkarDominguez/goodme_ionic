@@ -11,4 +11,12 @@
     The world is your oyster.
     <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
   </div>
+  <ion-button (click)="onClick()">
+    login
+  </ion-button>
+  <input type="file"  (change)="subirimg($event.target.files)" >
+  <ion-button (click)="escojerfoto()">
+    foto
+  </ion-button>
+  actual
 </ion-content>
