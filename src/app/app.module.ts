@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { Crop } from '@ionic-native/crop/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { FormBuilder } from '@angular/forms';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,9 +34,11 @@ import { File } from '@ionic-native/file/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    FormBuilder,
     ImagePicker,
     Crop,
-    File
+    File,
+    NativeStorage
   ],
   bootstrap: [AppComponent]
 })

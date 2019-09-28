@@ -1,0 +1,158 @@
+
+.p-0{
+    padding: 0px !important; 
+}
+.p-2 {
+    padding: 2% !important;
+}
+.p-4 {
+    padding: 4% !important;
+}
+.p-8 {
+    padding: 8% !important;
+}
+.p-10 {
+    padding: 10% !important;
+}
+.p-20 {
+    padding: 20% !important;
+}
+.m-0{
+    margin: 0px !important; 
+}
+.m-2{
+    margin: 2% !important; 
+}
+.m-4{
+    margin: 4% !important; 
+}
+.m-8{
+    margin: 8% !important; 
+}
+.m-10{
+    margin: 10%!important; 
+}
+.m-20{
+    margin: 20% !important; 
+}
+
+.img-profile{
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    background: var(--color-primary-1);
+    border: 4px solid var(--color-primary-1);
+}
+.logo{
+    //margin: 0px !important;
+    //padding: 0px !important;
+    height: 50%;
+    //width: 100% !important;
+    //height: 50% !important;
+}
+.img-logo{
+    padding: 0px !important;
+    width: 100% !important;
+}
+.input {
+    height: 50px !important;
+    padding: 4% !important;
+    border-radius: 50px;
+    color: var(--color-primary-1);
+    border: 1px solid var(--color-primary-1);
+    --background: var(--color-white);
+}
+.input-select {
+    height: 50px !important;
+    width: 100% !important;
+    padding: 4% !important;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    color: var(--color-primary-1);
+    border: 1px solid var(--color-primary-1);
+    --background: var(--color-white);
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn {
+    height: 50px !important;
+}
+.text-primary{
+    color: var(--color-primary-1);
+}
+ion-icon {
+    &.m {
+        width: 30px;
+        height: 30px;
+      }
+    &.big {
+      width: 50px;
+      height: 50px;
+    }
+    &.bigger {
+      width: 100px;
+      height: 100px;
+    }
+}
+.v-center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.bg_primary_2{
+    --color:var(--color-primary-1);
+    --background: var(--color-primary-2) !important;
+}
+
+.bg_primary{
+    --color:#ffffff;
+    --background: var(--color-primary-1) !important;
+}
+
+.bg_primary_gr{
+    --color:#ffffff;
+    --background: linear-gradient(
+        45deg, 
+        var(--color-primary-4),
+        var(--color-primary-1) 25%,
+        var(--color-primary-3)
+    ) !important;
+}
+
+.bg_gray{
+    --background:var(--color-gray-1);
+}
+
+
+ion-tabs{
+    background-color: var(--color-gray-1) !important;
+    
+}
+ion-tab-bar{
+    height: 8%;
+    border-radius: 33px 33px 0px 0px !important;
+    box-shadow: 0px 3px 6px #0000002d !important;
+}
+
+ion-header {
+    background-color: var(--color-gray-1) !important;
+    height: 12%;
+}
+ion-toolbar {
+    height: 100%;
+    border-radius: 0px 0px 0px 60px !important; 
+    background-color: var(--color-gray-1) !important;
+    box-shadow: 0px 3px 6px #0000002d !important;
+}
+ion-card{
+    padding: 0 !important;
+    margin: 15px 0px 15px 20px !important;
+    border-radius: 30px 0px 0px 30px !important; 
+    --background:var(--color-white) !important;
+}

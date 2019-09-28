@@ -1,0 +1,85 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div align="center">
+          <h4 class="text-primary">REGISTRO</h4>
+        </div>
+      </ion-col>
+      <ion-col size="12">
+        <div align="center">
+          <img class="img-profile m-2" src="../../assets/icons/user.svg" alt="" />
+        </div>
+      </ion-col>
+      <!--fullname-->
+      <ion-col size="12">
+        <ion-input placeholder="Nombre completo" class="input"></ion-input>
+      </ion-col>
+      <!--weight-->
+      <ion-col size="12">
+        <ion-label class="text-primary">Peso kl.</ion-label>
+        <ion-range min="40" max="120" step="1">
+        </ion-range>
+      </ion-col>
+      <!--long-->
+      <ion-col size="12">
+        <ion-label class="text-primary">Estatura cm.</ion-label>
+        <ion-range min="120" max="220" step="1">
+        </ion-range>
+      </ion-col>
+      <!--genere-->
+      <ion-col size="12">
+        <ion-label class="text-primary">Género</ion-label>
+        <br>
+        <div align="center">
+          <ion-radio-group>
+            <ion-icon class="text-primary m" name="female"></ion-icon>
+            <ion-radio slot="start" value="Femenino" checked></ion-radio>
+            <ion-label class="text-primary">
+              Femenino
+            </ion-label>
+            <br>
+            <ion-icon class="text-primary m" name="male"></ion-icon>
+            <ion-radio slot="start" value="Masculino"></ion-radio>
+            <ion-label class="text-primary">
+              Masculino
+            </ion-label>
+          </ion-radio-group>
+        </div>
+      </ion-col>
+      <!--phone-->
+      <ion-col size="4">
+        <ion-select interface="popover" class="input-select">
+          <ion-select-option value="54">(Ar) +54 🇦🇷</ion-select-option>
+          <ion-select-option value="591" selected>(Bo) +591 🇧🇴</ion-select-option>
+          <ion-select-option value="55">(Br) +55 🇧🇷</ion-select-option>
+          <ion-select-option value="56">(Cl) +56 🇨🇱</ion-select-option>
+          <ion-select-option value="57">(Co) +57 🇨🇴</ion-select-option>
+          <ion-select-option value="593">(Ec) +593 🇪🇨</ion-select-option>
+          <ion-select-option value="595">(Pa) +595 🇵🇾</ion-select-option>
+          <ion-select-option value="51">(Pe) +51 🇵🇪</ion-select-option>
+          <ion-select-option value="598">(Ur) +598 🇺🇾</ion-select-option>
+          <ion-select-option value="58">(Ve) +58 🇻🇪</ion-select-option>
+        </ion-select>
+      </ion-col>
+      <ion-col size="8">
+        <ion-input type="number" placeholder="Número" class="input"></ion-input>
+      </ion-col>
+      <!--email-->
+      <ion-col size="12">
+        <ion-input type="email" placeholder="Correo" class="input"></ion-input>
+      </ion-col>
+      <!--password-->
+      <ion-col size="12">
+        <ion-input type="password" placeholder="Contraseña" class="input"></ion-input>
+      </ion-col>
+      <!--confirm password-->
+      <ion-col size="12">
+        <ion-input type="password" placeholder="Confirmar contraseña" class="input"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button expand="full" class="btn bg_primary" shape="round">CONFIRMAR</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
