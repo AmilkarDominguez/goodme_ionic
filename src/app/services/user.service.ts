@@ -66,4 +66,46 @@ export class UserService {
     }`
     return this.mutacionGQL(query,{file:file},{hasUpload: true})
   }
+  register(data:{
+    nombre_completo:String
+    email:String
+    password:String
+    password_confirmation:String
+    peso:number
+    altura:number
+    telefono:String
+    genero:string
+    fecha_nacimiento:string
+  }){
+    let query=gql`mutation(
+      $nombre_completo:String!,
+      $email:String!,
+      $password:String!,
+      $password_confirmation:String!,
+      $peso:Int!,
+      $altura:Int!,
+      $telefono:String!,
+      $genero:Genero!,
+      $fecha_nacimiento:Date!
+    ){
+      register(input:{
+        nombre_completo:$nombre_completo,
+        email:$email,
+        password:$password,
+        password_confirmation:$password_confirmation,
+      	telefono:$telefono,
+        peso:$peso,
+        altura:$altura,
+        genero:$genero,
+        fecha_nacimiento:$fecha_nacimiento
+      }){
+        access_token
+        user{
+          id nombre_completo fecha_nacimiento
+        }
+      }
+    }`
+
+  return this.mutacionGQL(query,data)
+  }
 }

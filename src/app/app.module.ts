@@ -16,7 +16,7 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { Crop } from '@ionic-native/crop/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormsModule, FormControl } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +34,6 @@ import { FormBuilder } from '@angular/forms';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    FormBuilder,
     ImagePicker,
     Crop,
     File,
