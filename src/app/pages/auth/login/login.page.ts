@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 import { RegisterPage } from '../register/register.page';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { AlertService } from 'src/app/services/alert.service';
+import { UserService } from 'src/app/services/user.service';
+import { AuthPayload } from 'src/app/models/models';
 
 @Component({
   selector: 'app-login',
@@ -11,13 +13,20 @@ import { AlertService } from 'src/app/services/alert.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  
+  loginForm:FormGroup
   constructor(
     private modalController: ModalController,
     private authService: AuthService,
     private navCtrl: NavController,
-    private alertService: AlertService
-  ) { }
+    private alertService: AlertService,
+     public formb: FormBuilder,
+     private user:UserService
+  ) {
+    this.loginForm=this.formb.group({
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    })
+   }
 
   ngOnInit() {
   }
@@ -33,19 +42,20 @@ export class LoginPage implements OnInit {
     return await registerModal.present();
   }
 
-  login(form: NgForm) {
-    this.authService.login(form.value.email, form.value.password).subscribe(
-      data => {
-        this.alertService.presentToast("Conectado");
-      },
-      error => {
-        console.log(error);
-      },
-      () => {
-
+  onSubmit(){
+    console.log(this.loginForm.value);
+    let sub = this.authService.login(this.loginForm.value)
+			.subscribe((res) => {
+        let data=res.data.login
+        console.log(res,data);
+        this.authService.isLoggedIn=true
+				localStorage.setItem("tokenAuth", `${data.token_type} ${data.access_token}`)
+        sub.unsubscribe()
         this.navCtrl.navigateRoot('/dashboard');
-      }
-    );
+			}, err => {
+				console.log(err);
+			})
   }
+
 
 }

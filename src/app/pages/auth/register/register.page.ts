@@ -21,7 +21,8 @@ export class RegisterPage implements OnInit {
     private navCtrl: NavController,
     private alertService: AlertService,
     private formb:FormBuilder,
-    private user:UserService
+    private user:UserService,
+    private storage:NativeStorage
   ) { 
     this.registerForm=this.formb.group({
       nombre_completo: ['', [Validators.required]],
@@ -43,19 +44,28 @@ export class RegisterPage implements OnInit {
   onSubmit(){
     console.log(this.registerForm.value);
     let data=this.registerForm.value
-    this.user.register({
+    let sub=this.authService.register({
       nombre_completo:data.nombre_completo,
-      fecha_nacimiento:data.fecha_nacimiento,
+      fecha_nacimiento:data.fecha_nacimiento.substr(0,9),
       genero:data.genero,
       altura:data.altura,
       peso:data.peso,
-      email:data.altura,
+      email:data.email,
       telefono:data.telefono,
-      password:data.nombre_completo,
-      password_confirmation:data.nombre_completo
+      password:data.password,
+      password_confirmation:data.password_confirmation
     })
     .subscribe(data=>{
       console.log(data);
+      let datos = data.data.register
+      localStorage.setItem("tokenAuth", `${datos.token_type} ${datos.access_token}`)
+      this.storage.setItem('token', `${datos.token_type} ${datos.access_token}`)
+        .then(
+          () => {
+            console.log('Token Almacenado');
+            this.authService.isLoggedIn=true
+            sub.unsubscribe()
+          })
       
     },err=>{
       console.log(err);
@@ -69,29 +79,5 @@ export class RegisterPage implements OnInit {
   }
 
 
-  register(form) {
-    this.authService.register(form.value.fName, form.value.email, form.value.password).subscribe(
-      data => {
-        this.authService.login(form.value.email, form.value.password).subscribe(
-          data => {
-          },
-          error => {
-            console.log(error);
-          },
-          () => {
-            this.dismissRegister();
-            this.navCtrl.navigateRoot('/dashboard');
-          }
-        );
-        this.alertService.presentToast(data['message']);
-      },
-      error => {
-        console.log(error);
-      },
-      () => {
-        
-      }
-    );
-  }
 }
 

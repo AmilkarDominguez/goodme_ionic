@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
 	ngOnInit(): void {
 		let sub = this.user.usuarios(2, "id nombre_completo")
 			.subscribe(res => {
-				let datos = res.data.user
+				let datos = res.data.users
 				console.log(res);
 				sub.unsubscribe()
 			}, err => {
@@ -27,16 +27,19 @@ export class HomePage implements OnInit {
 			})
 	}
 	onClick() {
-		let sub = this.user.login("daniel@gmail.com", "123123123")
-			.subscribe(res => {
-				let datos = res.data.login
-				console.log(res);
-				alert(JSON.stringify(datos))
-				localStorage.setItem("tokenAuth", `${datos.token_type} ${datos.access_token}`)
-				sub.unsubscribe()
-			}, err => {
-				console.log(err);
-			})
+		/**
+		 * 
+		 let sub = this.auth.login({username:"daniel@gmail.com", password:"123123123"})
+			 .subscribe(res => {
+				 let datos = res.data.login
+				 console.log(res);
+				 alert(JSON.stringify(datos))
+				 localStorage.setItem("tokenAuth", `${datos.token_type} ${datos.access_token}`)
+				 sub.unsubscribe()
+			 }, err => {
+				 console.log(err);
+			 })
+		 */
 
 	}
 	subirimg(ev) {

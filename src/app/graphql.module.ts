@@ -11,11 +11,11 @@ let healders=  new HttpHeaders({
     "Authorization":localStorage.getItem("tokenAuth")?localStorage.getItem("tokenAuth"):"",
 })
 const httpOptions = {
-  uri: 'http://192.168.1.15:8000/graphql',
+  uri: 'http://192.168.1.24:8000/graphql',
   headers:healders
 }
 const httpOptionsupload = {
-  uri: 'http://192.168.1.15:8000/graphql'
+  uri: 'http://192.168.1.24:8000/graphql'
 }
 
 const httpLinkupload = ApolloLink.split(

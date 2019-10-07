@@ -1,47 +1,52 @@
 <ion-content>
   <div align="center" class="p-0 m-0">
-      <img class="img-logo" src="../../assets/images/logo_login.svg" alt="" />
+    <img class="img-logo" src="../../assets/images/logo_login.svg" alt="" />
   </div>
-  <ion-grid>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <ion-grid fixed>
     <ion-row>
-      <ion-col size="12">
-        <ion-input placeholder="Correo" class="input"></ion-input>
-      </ion-col>
-      <ion-col size="12">
-        <ion-input type="password" placeholder="Contraseña" class="input"></ion-input>
-      </ion-col>
-      <ion-col size="12">
-        <ion-button expand="full" class="btn bg_primary" shape="round">INGRESAR</ion-button>
-      </ion-col>
-      <ion-col size="12">
-        <div align="right" class="p-2">
-          <a (click)="registerModal()">Registrarse</a>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="3" offset="3">
-        <div align="center">
-          <ion-fab-button class="bg_primary">
-            <ion-icon name="logo-google"></ion-icon>
-          </ion-fab-button>
-        </div>
-      </ion-col>
-      <ion-col size="3">
-        <div align="center">
-          <ion-fab-button class="bg_primary">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </ion-fab-button>
-        </div>
-      </ion-col>
-      <ion-col offset="3"></ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12">
-        <div align="center">
-          <a href=""><b>¿Olvidaste la contraseña?</b></a>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        <ion-col size="12">
+          <ion-input formControlName="username" placeholder="correo" class="input"></ion-input>
+        </ion-col>
+        <ion-col size="12">
+          <ion-input formControlName="password" type="password" placeholder="Contraseña" class="input"></ion-input>
+        </ion-col>
+        <ion-col size="12">
+          
+          <ion-button expand="full" class="btn bg_primary" shape="round" type="submit" [disabled]="loginForm.invalid">
+            INGRESAR
+          </ion-button>
+        </ion-col>
+        <ion-col size="12">
+          <div align="right" class="p-2">
+            <a (click)="registerModal()">Registrarse</a>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3" offset="3">
+          <div align="center">
+            <ion-fab-button class="bg_primary">
+              <ion-icon name="logo-google"></ion-icon>
+            </ion-fab-button>
+          </div>
+        </ion-col>
+        <ion-col size="3">
+          <div align="center">
+            <ion-fab-button class="bg_primary">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </ion-fab-button>
+          </div>
+        </ion-col>
+        <ion-col offset="3"></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <div align="center">
+            <a href=""><b>¿Olvidaste la contraseña?</b></a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>
